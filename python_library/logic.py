@@ -8,6 +8,8 @@ def convert():
             url = str(dic['Name'])
             url2 = url.lower()
             url3 = url2.replace(" ", "")
-            print(url3 + '.com/careers')
+            url4 = url3 + '.com/careers'
+            li = list(url4.split(" "))
+            print(li)
 
 print(convert())
