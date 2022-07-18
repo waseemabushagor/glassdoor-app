@@ -6307,7 +6307,4 @@ def search_marketcap_lessthan(marketcap):
     marketcap_value = (list_of_company_dict[i]['marketcap'])
     if int(marketcap) >= marketcap_value:
       print(list_of_company_dict[i])
-
-print(search_name('USA'))
-      
 # range(0, 783)
