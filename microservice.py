@@ -12,7 +12,7 @@ async def root():
 
 
 @app.get("/search/{name}")
-async def search(value: str):
+async def search_name(value: str):
     """Search by company name"""
 
     result = search_name(name)

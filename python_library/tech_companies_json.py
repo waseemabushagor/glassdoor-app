@@ -1,5 +1,3 @@
-import json
-
 json_dic = {
    "companies":[
       {
