@@ -7,5 +7,3 @@ lint:
 
 format:
 	black *.py python_library/*.py
-
-all: install lint test format
