@@ -1,4 +1,4 @@
-'''from fastapi import FastAPI
+from fastapi import FastAPI
 import uvicorn
 import python_library.tech_companies_json
 from python_library.tech_companies_json import *
@@ -48,4 +48,4 @@ async def root():
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, port=8080, host="0.0.0.0")'''
+    uvicorn.run(app, port=8080, host="0.0.0.0")
