@@ -14,10 +14,13 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          make install
+          make all
       - name: Lint with pylint
         run: |
           make lint
       - name: Format code with Python Black
         run: |
           make format
+      - name: Build Dockerimage and push
+        run: |
+          make deploy
