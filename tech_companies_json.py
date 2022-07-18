@@ -6272,8 +6272,8 @@ list_of_company_dict = json_dic["companies"]
 
 def main_function(list_of_company_dict):
     for i in range(len(list_of_company_dict)):
-        company_name = list_of_company_dict[i]["Name"]
-        website = "".join(company_name.split()).lower() + ".com/careers"
+        #company_name = list_of_company_dict[i]["Name"]
+        website = "".join(list_of_company_dict[i]["Name"].split()).lower() + ".com/careers"
         list_of_company_dict[i]["Website"] = website
     return list_of_company_dict
 
@@ -6315,6 +6315,6 @@ def search_rank(rank):
         if marketcap >= marketcap_value:
             print(new_list_of_company_dict[i])'''
 
-
+print(search_name('tesla'))
 
 # range(0, 783)
