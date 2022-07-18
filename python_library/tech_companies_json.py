@@ -6301,14 +6301,14 @@ def search_symbol(symbol):
 def search_rank(rank):
     for i in range(len(list_of_company_dict)):
         rank_value = list_of_company_dict[i]["Rank"]
-        if int(rank) == rank_value:
+        if rank == rank_value:
             return list_of_company_dict[i]
 
 
 def search_marketcap_lessthan(marketcap):
     for i in range(len(list_of_company_dict)):
         marketcap_value = list_of_company_dict[i]["marketcap"]
-        if int(marketcap) >= marketcap_value:
+        if marketcap >= marketcap_value:
             print(list_of_company_dict[i])
 
 
