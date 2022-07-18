@@ -16,7 +16,7 @@ def hello():
 def search_name(name):
     for i in range(len(new_list_of_company_dict)):
         name_value = new_list_of_company_dict[i]["Name"]
-        if name == name_value or "".join(name_value.split()).lower():
+        if name.lower() == name_value or name.lower() in name_value.lower():
             return jsonify(new_list_of_company_dict[i])
 
 

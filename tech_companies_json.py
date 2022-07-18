@@ -6282,7 +6282,7 @@ new_list_of_company_dict = main_function(list_of_company_dict)
 def search_name(name):
     for i in range(len(new_list_of_company_dict)):
         name_value = new_list_of_company_dict[i]["Name"]
-        if name or name.lower() == name_value:
+        if name.lower() == name_value or name.lower() in name_value.lower():
             return new_list_of_company_dict[i]
 
 
