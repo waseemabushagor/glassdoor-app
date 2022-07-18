@@ -21,6 +21,3 @@ jobs:
       - name: Format code with Python Black
         run: |
           make format
-      - name: Build Dockerimage and push
-        run: |
-          make deploy
