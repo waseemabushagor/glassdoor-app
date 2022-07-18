@@ -6277,8 +6277,8 @@ for company in range(len(list_of_company_dict)):
 
 def search_name(name):
     for i in range(len(list_of_company_dict)):
-        company_name = list_of_company_dict[i]["Name"]
-        if name or name.lower() == company_name:
+        name_value = list_of_company_dict[i]["Name"]
+        if name or name.lower() == name_value:
             return list_of_company_dict[i]
 
 
