@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 lint:
-	pylint --disable=R,C *.py python_library
+	pylint --disable=R,C microservice.py python_library
 
 format:
 	black *.py python_library/*.py
