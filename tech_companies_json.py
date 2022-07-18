@@ -6271,10 +6271,10 @@ list_of_company_dict = json_dic["companies"]
 
 
 def main_function(list_of_company_dict):
-    for company in range(len(list_of_company_dict)):
-        company_name = list_of_company_dict[company]["Name"]
+    for i in range(len(list_of_company_dict)):
+        company_name = list_of_company_dict[i]["Name"]
         website = "".join(company_name.split()).lower() + ".com/careers"
-        list_of_company_dict[company]["Website"] = website
+        list_of_company_dict[i]["Website"] = website
     return list_of_company_dict
 
 new_list_of_company_dict = main_function(list_of_company_dict)
