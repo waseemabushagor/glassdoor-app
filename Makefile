@@ -3,10 +3,10 @@ install:
 		pip install -r requirements.txt
 
 lint:
-	pylint --disable=R,C microservice.py python_library
+	pylint --disable=R,C main.py
 
 format:
-	black *.py python_library/*.py
+	black main.py
 	
 deploy:
 	#deploy
@@ -15,4 +15,4 @@ deploy:
 	docker tag waseem:latest public.ecr.aws/q5e6p0b8/waseem:latest
 	docker push public.ecr.aws/q5e6p0b8/waseem:latest
 
-all: install post-install lint test format deploy
+all: install lint format deploy
