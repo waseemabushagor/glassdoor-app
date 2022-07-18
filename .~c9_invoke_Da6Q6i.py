@@ -6269,47 +6269,52 @@ json_dic = {
 
 list_of_company_dict = json_dic["companies"]
 
-for company in range(len(list_of_company_dict)):
-    company_name = list_of_company_dict[company]["Name"]
-    website = "".join(company_name.split()).lower() + ".com/careers"
-    list_of_company_dict[company]["Website"] = website
 
+def main_function(list_of_company_dict):
+    for company in range(len(list_of_company_dict)):
+        company_name = list_of_company_dict[company]["Name"]
+        website = "".join(company_name.split()).lower() + ".com/careers"
+        list_of_company_dict[company]["Website"] = website
+    return list_of_company_dict
+
+new_list_of_company_dict = main_function(list_of_company_dict)
 
 def search_name(name):
-    for i in range(len(list_of_company_dict)):
-        name_value = list_of_company_dict[i]["Name"]
+    for i in range(len(new_list_of_company_dict)):
+        name_value = new_list_of_company_dict[i]["Name"]
         if name or name.lower() == name_value:
-            return list_of_company_dict[i]
+            return new_list_of_company_dict[i]
 
 
-def search_location(location):
-    for i in range(len(list_of_company_dict)):
-        location_value = list_of_company_dict[i]["country"]
+'''def search_location(location):
+    for i in range(len(new_list_of_company_dict)):
+        location_value = new_list_of_company_dict[i]["country"]
         if location or location.lower() == location_value:
-            print(list_of_company_dict[i])
+            print(new_list_of_company_dict[i])
         elif location or location.lower() == "USA":
-            print(list_of_company_dict[i])
+            print(new_list_of_company_dict[i])'''
 
 
 def search_symbol(symbol):
-    for i in range(len(list_of_company_dict)):
-        symbol_value = list_of_company_dict[i]["Symbol"]
+    for i in range(len(new_list_of_company_dict)):
+        symbol_value = new_list_of_company_dict[i]["Symbol"]
         if symbol.upper() == symbol_value:
-            return list_of_company_dict[i]
+            return new_list_of_company_dict[i]
 
 
 def search_rank(rank):
-    for i in range(len(list_of_company_dict)):
-        rank_value = list_of_company_dict[i]["Rank"]
+    for i in range(len(new_list_of_company_dict)):
+        rank_value = new_list_of_company_dict[i]["Rank"]
         if rank == rank_value:
-            return list_of_company_dict[i]
+            return new_list_of_company_dict[i]
 
 
-def search_marketcap_lessthan(marketcap):
-    for i in range(len(list_of_company_dict)):
-        marketcap_value = list_of_company_dict[i]["marketcap"]
+'''def search_marketcap_lessthan(marketcap):
+    for i in range(len(new_list_of_company_dict)):
+        marketcap_value = new_list_of_company_dict[i]["marketcap"]
         if marketcap >= marketcap_value:
-            print(list_of_company_dict[i])
+            print(new_list_of_company_dict[i])'''
+
 
 
 # range(0, 783)
